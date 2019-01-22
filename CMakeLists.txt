@@ -32,6 +32,7 @@ option(BENCHMARK_DOWNLOAD_DEPENDENCIES "Allow the downloading and in-tree buildi
 option(BENCHMARK_ENABLE_GTEST_TESTS "Enable building the unit tests which depend on gtest" OFF)
 
 set(ENABLE_ASSEMBLY_TESTS_DEFAULT OFF)
+set(CMAKE_REQUIRED_QUIET TRUE)
 function(should_enable_assembly_tests)
   if(CMAKE_BUILD_TYPE)
     string(TOLOWER ${CMAKE_BUILD_TYPE} CMAKE_BUILD_TYPE_LOWER)
